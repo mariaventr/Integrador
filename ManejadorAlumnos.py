@@ -38,14 +38,8 @@ class Manejador_Alumnos:
                     print(f"{dni}\t{apellido} {nombre}\t\t{fecha}\t{nota}\t{año}")
 
     def listaAlumnosOrdenado(self):
-        listaAño= sorted(self.__Alumnos, key=lambda x: x.getAño())
-        listaAlfabe= sorted(self.__Alumnos, key=lambda x: x.getApellido())
-        print("Lista ordenada por Año")
-        print("Apellido y Nombre\tAño que Cursa")
-        for alumno in listaAño:
-            print(f"{alumno.getApellido()} {alumno.getNombre()}\t\t{alumno.getAño()}")
-        print("Lista ordenada por Apellido y Nombre ")
-        print("Apellido y Nombre\tAño que Cursa")
-        for alumno in listaAlfabe:
-            print(f"{alumno.getApellido()} {alumno.getNombre()}\t\t{alumno.getAño()}")
+        lista=np.sort(self.__Alumnos)
+        print("Lista ordenada por año que cursan y alfabéticamente por apellido y nombre:")
+        for alumno in lista:
+            print(f"Año: {alumno.getAño()}, Apellido y Nombre: {alumno.getApellido()} {alumno.getNombre()}")
 
