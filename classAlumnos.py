@@ -23,5 +23,6 @@ class Alumno:
     def getAño(self):
         return self.__año
     
-    def __it__(self, otro):
-        return self.__año < otro.__año
+    def __lt__(self, other):
+        return (self.__año != other.__año and self.__año < other.__año) or \
+           (self.__año == other.__año and (self.__apellido, self.__nombre) < (other.__apellido, other.__nombre))
