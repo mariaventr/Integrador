@@ -4,7 +4,8 @@ class Menu:
         self.__switcher = {
             1:self.opcion1,
             2:self.opcion2,
-            3:self.opcion3
+            3:self.opcion3,
+            4:self.opcion4
         }
 
     def opcion1(self, materia):
@@ -25,8 +26,11 @@ class Menu:
     def opcion3(self, alumno):
         print("Listado de alumnos.")
         alumno.listaAlumnosOrdenado()
-
-
+    
+    def opcion4(self):
+        print("Usted esta saliendo del Programa")
+        
+        
     def ejecutar(self, manejadorM, manejadorA):
             while True:
                 print("Bienvenido al menú de opciones")
